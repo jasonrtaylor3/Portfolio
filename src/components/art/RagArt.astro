@@ -1,0 +1,71 @@
+---
+// Abstract cover art for the RAG/RFP project card: a request -> retrieve ->
+// generate -> draft pipeline, standing in for a real product screenshot.
+---
+
+<svg viewBox="0 0 480 240" class="h-full w-full" role="img" aria-label="Diagram of a retrieval-augmented generation pipeline for RFP drafting">
+  <defs>
+    <pattern id="rag-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="var(--color-border)" />
+    </pattern>
+    <marker id="rag-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--color-ink-dim)" />
+    </marker>
+  </defs>
+
+  <rect width="480" height="240" fill="var(--color-bg-soft)" />
+  <rect width="480" height="240" fill="url(#rag-dots)" />
+
+  <!-- connecting flow line -->
+  <line x1="88" y1="108" x2="196" y2="108" stroke="var(--color-ink-dim)" stroke-width="1.5" marker-end="url(#rag-arrow)" />
+  <line x1="228" y1="108" x2="196" y2="108" stroke="var(--color-ink-dim)" stroke-width="1.5" opacity="0" />
+  <line x1="216" y1="108" x2="316" y2="108" stroke="var(--color-accent)" stroke-width="1.5" marker-end="url(#rag-arrow)" />
+  <line x1="336" y1="108" x2="424" y2="108" stroke="var(--color-ink-dim)" stroke-width="1.5" marker-end="url(#rag-arrow)" />
+
+  <!-- node 1: RFP request -->
+  <g transform="translate(60,108)">
+    <circle r="30" fill="var(--color-bg)" stroke="var(--color-ink-dim)" stroke-width="1.5" />
+    <g stroke="var(--color-ink)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-10" y="-13" width="20" height="26" rx="2" />
+      <line x1="-5" y1="-6" x2="5" y2="-6" />
+      <line x1="-5" y1="0" x2="5" y2="0" />
+      <line x1="-5" y1="6" x2="1" y2="6" />
+    </g>
+    <text x="0" y="52" text-anchor="middle" fill="var(--color-ink-dim)" font-family="var(--font-mono)" font-size="10" letter-spacing="0.04em">RFP INTAKE</text>
+  </g>
+
+  <!-- node 2: retrieve -->
+  <g transform="translate(180,108)">
+    <circle r="30" fill="var(--color-bg)" stroke="var(--color-ink-dim)" stroke-width="1.5" />
+    <g stroke="var(--color-ink)" stroke-width="1.6" fill="none" stroke-linecap="round">
+      <ellipse cx="0" cy="-8" rx="11" ry="4.5" />
+      <path d="M-11,-8 v12 a11,4.5 0 0 0 22,0 v-12" />
+      <path d="M-11,-1.5 a11,4.5 0 0 0 22,0" />
+    </g>
+    <text x="0" y="52" text-anchor="middle" fill="var(--color-ink-dim)" font-family="var(--font-mono)" font-size="10" letter-spacing="0.04em">RETRIEVE</text>
+  </g>
+
+  <!-- node 3: generate (highlighted — the engineering-owned core model) -->
+  <g transform="translate(300,108)">
+    <circle r="32" fill="var(--color-bg)" stroke="var(--color-accent)" stroke-width="2" />
+    <path
+      d="M0,-13 L3.2,-3.2 L13,0 L3.2,3.2 L0,13 L-3.2,3.2 L-13,0 L-3.2,-3.2 Z"
+      fill="var(--color-accent)"
+    />
+    <text x="0" y="54" text-anchor="middle" fill="var(--color-accent)" font-family="var(--font-mono)" font-size="10" letter-spacing="0.04em">GENERATE</text>
+  </g>
+
+  <!-- node 4: draft output -->
+  <g transform="translate(420,108)">
+    <circle r="30" fill="var(--color-bg)" stroke="var(--color-ink-dim)" stroke-width="1.5" />
+    <g stroke="var(--color-ink)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-10" y="-13" width="20" height="26" rx="2" />
+      <path d="M-4,0 l3,4 l7,-9" />
+    </g>
+    <text x="0" y="52" text-anchor="middle" fill="var(--color-ink-dim)" font-family="var(--font-mono)" font-size="10" letter-spacing="0.04em">DRAFT</text>
+  </g>
+
+  <text x="240" y="205" text-anchor="middle" fill="var(--color-ink-dim)" font-family="var(--font-mono)" font-size="10" letter-spacing="0.03em" opacity="0.85">
+    PRODUCT-OWNED · ENGINEERING-BUILT
+  </text>
+</svg>

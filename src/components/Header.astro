@@ -1,0 +1,62 @@
+---
+import Icon from "./Icon.astro";
+import { profile, social, nav } from "../data/profile";
+---
+
+<header
+  class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-[380px] lg:shrink-0 lg:flex-col lg:justify-between lg:py-24"
+>
+  <div>
+    <h1 class="text-3xl font-semibold tracking-tight text-(--color-ink-bright)">
+      {profile.name}
+    </h1>
+    <h2 class="mt-2 text-lg font-medium text-(--color-ink)">{profile.role}</h2>
+    <p class="tag mt-1 text-(--color-ink-dim)">{profile.location}</p>
+    <p class="mt-4 max-w-xs text-(--color-ink-dim)">{profile.tagline}</p>
+
+    <a
+      href={profile.resumeUrl}
+      target="_blank"
+      rel="noreferrer"
+      class="tag mt-6 inline-flex items-center gap-2 rounded-full border border-(--color-border) px-4 py-2 uppercase text-(--color-ink) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
+    >
+      Résumé
+      <Icon name="external" class="size-3.5" />
+    </a>
+
+    <nav class="mt-10 hidden lg:block" aria-label="Section navigation">
+      <ul class="space-y-3">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={`#${item.id}`}
+                data-nav-link={item.id}
+                class="group flex items-center gap-3 text-sm text-(--color-ink-dim) transition-colors hover:text-(--color-ink-bright) aria-[current=true]:text-(--color-ink-bright)"
+              >
+                <span class="h-px w-6 bg-(--color-ink-dim) transition-all group-hover:w-10 group-hover:bg-(--color-accent) group-aria-[current=true]:w-10 group-aria-[current=true]:bg-(--color-accent)" />
+                <span class="tag uppercase">{item.label}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+
+  <div class="mt-10 flex items-center gap-5 lg:mt-0">
+    {
+      social.map((s) => (
+        <a
+          href={s.href}
+          target={s.href.startsWith("mailto:") ? undefined : "_blank"}
+          rel="noreferrer"
+          aria-label={s.label}
+          class="text-(--color-ink-dim) transition-colors hover:text-(--color-accent)"
+        >
+          <Icon name={s.icon} class="size-5" />
+        </a>
+      ))
+    }
+  </div>
+</header>

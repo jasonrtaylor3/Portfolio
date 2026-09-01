@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  href?: string;
+}
+
+const { title, description, tags, href } = Astro.props;
+const Tag = href ? "a" : "div";
+---
+
+<Tag
+  href={href}
+  target={href ? "_blank" : undefined}
+  rel={href ? "noreferrer" : undefined}
+  class="spotlight-card group relative flex flex-col overflow-hidden rounded-lg border border-(--color-border) bg-(--color-bg-soft) transition-colors hover:border-(--color-ink-dim)"
+>
+  <div class="aspect-[2/1] w-full border-b border-(--color-border)">
+    <slot name="art" />
+  </div>
+
+  <div class="p-5">
+    <div class="flex items-start justify-between gap-4">
+      <h3 class="font-medium text-(--color-ink-bright) transition-colors group-hover:text-(--color-accent)">
+        {title}
+      </h3>
+      {
+        href && (
+          <svg
+            class="mt-1 size-4 shrink-0 text-(--color-ink-dim) transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 17 17 7M9 7h8v8" />
+          </svg>
+        )
+      }
+    </div>
+    <p class="mt-2 text-sm text-(--color-ink-dim)">{description}</p>
+    <ul class="mt-4 flex flex-wrap gap-x-3 gap-y-1">
+      {
+        tags.map((t) => (
+          <li class="tag text-(--color-ink-dim)">{t}</li>
+        ))
+      }
+    </ul>
+  </div>
+</Tag>

@@ -1,0 +1,93 @@
+---
+// Abstract cover art for the Case Study Library project card: a plain-English
+// query feeding an LLM search into a case study document broken into its
+// Challenge / Solution / Results structure, peeking out of a small stack
+// (the "library"). Standing in for a real product screenshot.
+---
+
+<svg viewBox="0 0 480 240" class="h-full w-full" role="img" aria-label="Diagram of a natural-language search finding a case study document structured as Challenge, Solution, and Results">
+  <defs>
+    <pattern id="csl-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="var(--color-border)" />
+    </pattern>
+    <radialGradient id="csl-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .csl-cursor {
+      animation: csl-blink 1.1s steps(1) infinite;
+    }
+    @keyframes csl-blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <rect width="480" height="240" fill="var(--color-bg-soft)" />
+  <rect width="480" height="240" fill="url(#csl-dots)" />
+
+  <!-- natural-language query bar -->
+  <g>
+    <rect x="50" y="6" width="380" height="24" rx="6" fill="var(--color-bg)" stroke="var(--color-border)" />
+    <path
+      d="M68,12 L69.5,16.5 L74,18 L69.5,19.5 L68,24 L66.5,19.5 L62,18 L66.5,16.5 Z"
+      fill="var(--color-accent)"
+    />
+    <text x="82" y="22" fill="var(--color-ink)" font-family="var(--font-mono)" font-size="9.5">
+      Find me a case study with 50%+ ROAS on Meta Ads
+    </text>
+    <rect class="csl-cursor" x="416" y="12" width="1.6" height="12" fill="var(--color-accent)" />
+  </g>
+
+  <!-- query resolving down into the matched case study -->
+  <line x1="240" y1="30" x2="240" y2="37" stroke="var(--color-ink-dim)" stroke-width="1.5" />
+  <path d="M234,36 L240,44 L246,36 Z" fill="var(--color-ink-dim)" />
+
+  <!-- the library: faint stacked documents behind the featured one -->
+  <g stroke="var(--color-ink-dim)" stroke-width="1.5" fill="var(--color-bg)" opacity="0.5">
+    <rect x="168" y="34" width="200" height="172" rx="10" transform="rotate(-4 268 120)" />
+    <rect x="152" y="40" width="200" height="172" rx="10" transform="rotate(3 252 126)" />
+  </g>
+
+  <circle cx="260" cy="126" r="100" fill="url(#csl-glow)" />
+
+  <!-- the matched case study, broken into its narrative structure -->
+  <g transform="translate(160,40)">
+    <rect width="200" height="172" rx="10" fill="var(--color-bg)" stroke="var(--color-accent)" stroke-width="2" />
+
+    <line x1="0" y1="57" x2="200" y2="57" stroke="var(--color-border)" />
+    <line x1="0" y1="115" x2="200" y2="115" stroke="var(--color-border)" />
+
+    <!-- Challenge -->
+    <g transform="translate(22,29)" stroke="var(--color-ink)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0,-11 L11,10 H-11 Z" />
+      <line x1="0" y1="-3" x2="0" y2="2" />
+      <circle cx="0" cy="6.5" r="0.6" fill="var(--color-ink)" stroke="none" />
+    </g>
+    <text x="46" y="20" fill="var(--color-ink)" font-family="var(--font-mono)" font-size="11" letter-spacing="0.04em">CHALLENGE</text>
+    <line x1="46" y1="32" x2="178" y2="32" stroke="var(--color-ink-dim)" opacity="0.6" />
+    <line x1="46" y1="42" x2="150" y2="42" stroke="var(--color-ink-dim)" opacity="0.6" />
+
+    <!-- Solution -->
+    <g transform="translate(22,86)" stroke="var(--color-ink)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-6,-4 a6,6 0 1 1 12,0 c0,4 -3,4 -3,9 h-6 c0,-5 -3,-5 -3,-9 Z" />
+      <line x1="-3" y1="9" x2="3" y2="9" />
+    </g>
+    <text x="46" y="77" fill="var(--color-ink)" font-family="var(--font-mono)" font-size="11" letter-spacing="0.04em">SOLUTION</text>
+    <line x1="46" y1="89" x2="178" y2="89" stroke="var(--color-ink-dim)" opacity="0.6" />
+    <line x1="46" y1="99" x2="150" y2="99" stroke="var(--color-ink-dim)" opacity="0.6" />
+
+    <!-- Results (the payoff — called out in accent) -->
+    <g transform="translate(22,143)" stroke="var(--color-accent)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-11,10 L-3,0 L3,5 L11,-9" />
+      <path d="M4,-9 L11,-9 L11,-2" />
+    </g>
+    <text x="46" y="134" fill="var(--color-accent)" font-family="var(--font-mono)" font-size="11" letter-spacing="0.04em">RESULTS</text>
+    <line x1="46" y1="146" x2="178" y2="146" stroke="var(--color-ink-dim)" opacity="0.6" />
+    <line x1="46" y1="156" x2="120" y2="156" stroke="var(--color-ink-dim)" opacity="0.6" />
+  </g>
+</svg>
