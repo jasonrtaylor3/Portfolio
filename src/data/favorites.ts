@@ -1,5 +1,7 @@
 import kyrieIrving from "../assets/favorites/kyrie-irving.jpg";
 import russellWestbrook from "../assets/favorites/russell-westbrook.jpg";
+import alvinKamara from "../assets/favorites/alvin-kamara.jpg";
+import davanteAdams from "../assets/favorites/davante-adams.jpg";
 import theAlchemist from "../assets/favorites/the-alchemist.jpg";
 import darkMatter from "../assets/favorites/dark-matter.jpg";
 import thePrestige from "../assets/favorites/the-prestige.jpg";
@@ -18,10 +20,22 @@ export const favorites = [
         credit: "Photo: Erik Drost (CC BY 2.0)",
       },
       {
+        name: "Alvin Kamara",
+        blurb: "They say that life is about balance.",
+        image: alvinKamara,
+        credit: "Photo: All-Pro Reels (CC BY-SA 2.0)",
+      },
+      {
         name: "Russell Westbrook",
         blurb: "Passion and loyalty, embodied.",
         image: russellWestbrook,
         credit: "Photo: Keith Allison (CC BY-SA 2.0)",
+      },
+      {
+        name: "Davante Adams",
+        blurb: "\"Google.. who has the best split release of all time?\"",
+        image: davanteAdams,
+        credit: "Photo: All-Pro Reels (CC BY-SA 2.0)",
       },
     ],
   },
