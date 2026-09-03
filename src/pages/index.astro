@@ -102,12 +102,24 @@ const projectArt = {
                   {category.items.map((item) => (
                     <figure>
                       <div class="aspect-[3/4] overflow-hidden rounded-lg border border-(--color-border) bg-(--color-bg-soft)">
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={500}
-                          class="h-full w-full object-cover object-top"
-                        />
+                        {"kind" in item && item.kind === "video" ? (
+                          <video
+                            controls
+                            preload="none"
+                            playsinline
+                            poster={item.poster}
+                            class="h-full w-full object-cover object-top"
+                          >
+                            <source src={item.video} type="video/mp4" />
+                          </video>
+                        ) : (
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            width={500}
+                            class="h-full w-full object-cover object-top"
+                          />
+                        )}
                       </div>
                       <figcaption class="mt-3">
                         <p class="font-medium text-(--color-ink-bright)">{item.name}</p>

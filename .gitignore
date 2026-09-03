@@ -26,5 +26,9 @@ pnpm-debug.log*
 # source resume files kept outside the repo (public/resume.pdf is the published copy)
 /Jason*.pdf
 
+# raw source videos kept outside the repo (public/videos has the compressed, web-ready copies)
+/*.mov
+/*.MOV
+
 # private job-search tracker (local only, never published)
 /tracker/
