@@ -53,7 +53,7 @@ export const projects = [
     id: "case-study-library",
     title: "Case Study Library",
     description:
-      "A simple, internally-hosted, LLM-powered repository that let anyone search past case studies in plain English — e.g. \"find me a case study that shows a 50%+ ROAS on Meta Ads.\" Cut asset retrieval time by 80% for pitch decks and sales proposals, and shipped a shareable Claude skill that lets account executives auto-convert QBR results into customer-facing marketing materials.",
+      "Owned the development of an Internal Case Study Repository that lets anyone search past case studies in plain English — e.g. \"find me a case study that shows a 50%+ ROAS on Meta Ads.\" Cut asset retrieval time by 80% for pitch decks and sales proposals. Shipped alongside a shareable Claude skill that lets client services teams auto-convert QBR & campaign results into customer-facing marketing materials.",
     tags: ["Product & Engineering", "LLM", "Claude Skills", "Sales Enablement"],
   },
   {
