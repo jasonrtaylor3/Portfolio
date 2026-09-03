@@ -94,3 +94,13 @@ body {
     opacity: 1;
   }
 }
+
+/* Favorites videos use object-fit: cover to crop into their small card
+   thumbnail. That crop looks wrong once the video fills the whole screen
+   in fullscreen, so show the complete, uncropped frame there instead. */
+video:fullscreen,
+video:-webkit-full-screen {
+  object-fit: contain;
+  object-position: center;
+  background-color: black;
+}
