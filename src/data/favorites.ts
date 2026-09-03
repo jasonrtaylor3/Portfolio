@@ -33,7 +33,7 @@ export const favorites = [
       },
       {
         name: "Davante Adams",
-        blurb: "\"Google.. who has the best split release of all time?\"",
+        blurb: "\"Siri, who has the best split release of all time?\"",
         image: davanteAdams,
         credit: "Photo: All-Pro Reels (CC BY-SA 2.0)",
       },
