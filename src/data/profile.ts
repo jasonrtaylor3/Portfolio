@@ -25,7 +25,7 @@ export const nav = [
 
 export const about = [
   "I'm a revenue operations analyst based in NYC, improving sales operations through applied AI.",
-  "Currently a Revenue Operations Analyst at Moore, where I've acted as project manager on a $15M+ sales proposal pipeline, partnered with AI Engineering to ship internal tools that speed up how the sales team operates, and surface revenue intelligence that improves win rates on future proposals.",
+  "Currently a Revenue Operations Analyst at Moore, where I've acted as project manager on a $10M+ sales proposal pipeline, partnered with AI Engineering to ship internal tools that speed up how the sales team operates, and surface revenue intelligence that improves win rates on future proposals.",
   "I hold a Master's in Marketing Analytics and a Bachelor's in Neuroscience from the University of Maryland.",
 ];
 
@@ -36,7 +36,7 @@ export const experience = [
     company: "Moore",
     companyUrl: "#",
     summary:
-      "Directed end-to-end management of 25+ major sales proposals, securing $15M in annual revenue pipeline at a 23% win rate. Automated invoicing for the Data Sales team, cutting monthly processing delays by 20%, and partnered with top-performing sales reps as operational lead — deploying systems that increased meeting volume and bridged the gap between prospecting and close.",
+      "Directed end-to-end management of 25+ major sales proposals, securing $10M+ in annual revenue pipeline at a 20% win rate. Automated invoicing for the Data Sales team, cutting monthly processing delays by 20%, and partnered with top-performing sales reps as operational lead — deploying systems that increased meeting volume and bridged the gap between prospecting and close.",
   },
   {
     range: "May 2024 — Aug 2024",
@@ -44,7 +44,7 @@ export const experience = [
     company: "Moore",
     companyUrl: "#",
     summary:
-      "Led event attribution modeling for major conferences and corporate activations, delivering insights that shaped executive marketing budget decisions. Led on-the-ground event operations, coordinating logistics to bring the conference marketing and sales strategy to life, and partnered with Product Engineering to translate specs into high-conversion launch collateral across 5 product launches.",
+      "Led event attribution modeling for major conferences and corporate activations, delivering insights that shaped executive marketing budget decisions. Led event operations, coordinating with vendors and the on-the-ground team to bring the conference marketing and sales strategy to life, and partnered with the data pillar to translate data product specifications into high-conversion launch collateral across 5 product launches.",
   },
 ] as const;
 
@@ -60,7 +60,7 @@ export const projects = [
     id: "rag-rfp",
     title: "Automating Sales Proposals with RAG",
     description:
-      "Served as the lead on an internal, RAG-based tool built with the AI Engineering team. Allows our sales team to increase our work capacity by automating RFP responses, while maintaining quality and brand consistency across every bid.",
-    tags: ["Product Management", "RAG", "Cross-functional Leadership"],
+      "Served as the lead on an internal, GraphRAG-based tool built with the AI Engineering team. Allows our sales team to increase our work capacity by automating RFP responses — cutting response time by 50% — while maintaining quality and brand consistency across every bid.",
+    tags: ["Product Management", "GraphRAG", "Cross-functional Leadership"],
   },
 ] as const;
