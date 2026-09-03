@@ -85,19 +85,17 @@ export const favorites = [
     ],
   },
   {
-    label: "Lifestyle",
+    label: "Hobbies",
     items: [
       {
         kind: "video",
         name: "Hoops",
-        blurb: "Pickup games whenever I can get them.",
         video: "/videos/hoops.mp4",
         poster: "/videos/hoops-poster.jpg",
       },
       {
         kind: "video",
         name: "Gym",
-        blurb: "Bodyweight work over anything fancy.",
         video: "/videos/gym.mp4",
         poster: "/videos/gym-poster.jpg",
       },

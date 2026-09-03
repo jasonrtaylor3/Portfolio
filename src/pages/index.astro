@@ -123,7 +123,9 @@ const projectArt = {
                       </div>
                       <figcaption class="mt-3">
                         <p class="font-medium text-(--color-ink-bright)">{item.name}</p>
-                        <p class="mt-1 text-sm italic text-(--color-ink-dim)">{item.blurb}</p>
+                        {"blurb" in item && (
+                          <p class="mt-1 text-sm italic text-(--color-ink-dim)">{item.blurb}</p>
+                        )}
                         {"credit" in item && (
                           <p class="tag mt-1.5 text-(--color-ink-dim) opacity-60">{item.credit}</p>
                         )}
