@@ -4,10 +4,10 @@
 
 export const profile = {
   name: "Jason Taylor",
-  role: "Revenue Operations Analyst",
+  role: "Revenue Analyst",
   tagline: "I manage sales proposals and build systems that help sales teams move faster and perform better.",
   email: "jasonrtaylor3@gmail.com",
-  location: "New York City",
+  location: "Bethesda, MD",
   resumeUrl: "/resume.pdf",
 };
 
@@ -24,19 +24,19 @@ export const nav = [
 ] as const;
 
 export const about = [
-  "I'm a revenue operations analyst based in NYC, improving sales operations through applied AI.",
-  "Currently a Revenue Operations Analyst at Moore, where I've acted as project manager on a $10M+ sales proposal pipeline, partnered with AI Engineering to ship internal tools that speed up how the sales team operates, and surface revenue intelligence that improves win rates on future proposals.",
+  "I'm a revenue analyst based in Bethesda, MD, improving sales operations through applied AI.",
+  "Currently a Revenue Analyst at Moore, where I serve as RFP project manager across 25+ proposals representing $25M+ in annual pipeline value, own quarterly sales performance reporting for the Chief Revenue Officer, and build AI-powered tools that help the sales team move faster.",
   "I hold a Master's in Marketing Analytics and a Bachelor's in Neuroscience from the University of Maryland.",
 ];
 
 export const experience = [
   {
     range: "Jan 2025 — Present",
-    title: "Revenue Operations Analyst",
+    title: "Revenue Analyst",
     company: "Moore",
     companyUrl: "#",
     summary:
-      "Directed end-to-end management of 25+ major sales proposals, securing $10M+ in annual revenue pipeline at a 20% win rate. Automated invoicing for the Data Sales team, cutting monthly processing delays by 20%, and partnered with top-performing sales reps as operational lead — deploying systems that increased meeting volume and bridged the gap between prospecting and close.",
+      "Owned quarterly sales performance reporting, validating CRM data and analyzing pipeline by vertical and opportunity type to deliver dashboards to the Chief Revenue Officer. Served as RFP project manager across 25+ proposals representing $25M+ in annual pipeline value, partnering with sales leadership and cross-functional teams to manage deliverables and ensure submission quality, and ran win/loss and gap analyses against competitors to strengthen future bids. Automated invoicing for the Data Sales team, cutting processing delays by 20%, and partnered with top-performing sales reps as their operational lead, deploying systems that let them spend more time prospecting rather than writing proposals.",
   },
   {
     range: "May 2024 — Aug 2024",
@@ -44,7 +44,7 @@ export const experience = [
     company: "Moore",
     companyUrl: "#",
     summary:
-      "Led event attribution modeling for major conferences and corporate activations, delivering insights that shaped executive marketing budget decisions. Led event operations, coordinating with vendors and the on-the-ground team to bring the conference marketing and sales strategy to life, and partnered with the data pillar to translate data product specifications into high-conversion launch collateral across 5 product launches.",
+      "Analyzed event attribution and performance data across 6 events to identify which conferences and activations drove outcomes, translating findings into recommendations for future marketing budget allocation. Partnered with the data team to translate product specs into marketing collateral for product launches and demos at conferences and events.",
   },
 ] as const;
 
@@ -53,14 +53,14 @@ export const projects = [
     id: "case-study-library",
     title: "Case Study Library",
     description:
-      "Owned the development of an Internal Case Study Repository that lets anyone search past case studies in plain English — e.g. \"find me a case study that shows a 50%+ ROAS on Meta Ads.\" Cut asset retrieval time by 80% for pitch decks and sales proposals. Shipped alongside a shareable Claude skill that lets client services teams auto-convert QBR & campaign results into customer-facing marketing materials.",
+      "Owned the development of an internal case study repository, starting with discovery sessions with sales users to understand their content retrieval challenges. Lets anyone search past case studies in plain English — e.g. \"find me a case study that shows a 50%+ ROAS on Meta Ads.\" Cut retrieval time by 80%, and drove adoption through lunch-and-learns and live demos. Shipped alongside a Claude skill that automates converting QBR results into collateral for the sales team.",
     tags: ["Product & Engineering", "LLM", "Claude Skills", "Sales Enablement"],
   },
   {
     id: "rag-rfp",
-    title: "Automating Sales Proposals with RAG",
+    title: "Automating Sales Proposals with GraphRAG",
     description:
-      "Served as the lead on an internal, GraphRAG-based tool built with the AI Engineering team. Allows our sales team to increase our work capacity by automating RFP responses — cutting response time by 50% — while maintaining quality and brand consistency across every bid.",
+      "Led product management for an internal GraphRAG proposal tool. Prototyped it with Claude Code and Codex, validated user needs through demos, conversations, and internal surveys, and ran discovery sessions with sales teams to turn their workflows into requirements — reducing RFP response time by 50%.",
     tags: ["Product Management", "GraphRAG", "Cross-functional Leadership"],
   },
 ] as const;
